@@ -107,8 +107,8 @@ public class LatkNetwork : MonoBehaviour {
         }
     }
 
-    public void sendStrokeData(string data) {
-        socketManager.Socket.Emit("clientStrokeToServer", data);
+    public void sendStrokeData(List<Vector3> data) {
+        socketManager.Socket.Emit("clientStrokeToServer", setJsonFromPoints(data));
     }
 
     private void OnApplicationQuit() {
@@ -120,14 +120,37 @@ public class LatkNetwork : MonoBehaviour {
 
     public List<Vector3> getPointsFromJson(JSONNode ptJson, float scaler) {
         List<Vector3> returns = new List<Vector3>();
-        for (var j = 0; j < ptJson.Count; j++) {
-            var co = ptJson[j]["co"];
+        //try {
+            for (var j = 0; j < ptJson.Count; j++) {
+                var co = ptJson[j]["co"];
 
-            //if (j === 0 || !useMinDistance || (useMinDistance && origVerts[j].distanceTo(origVerts[j-1]) > minDistance)) {
-            returns.Add(new Vector3(co[0].AsFloat, co[1].AsFloat, co[2].AsFloat) * scaler);
-            //}
-        }
+                //if (j === 0 || !useMinDistance || (useMinDistance && origVerts[j].distanceTo(origVerts[j-1]) > minDistance)) {
+                returns.Add(new Vector3(co[0].AsFloat, co[1].AsFloat, co[2].AsFloat) * scaler);
+                //}
+            }
+        //} catch (Exception e) { }
         return returns;
+    }
+
+    public String setJsonFromPoints(List<Vector3> points) {
+        List<String> sb = new List<String>();
+        sb.Add("{");
+        sb.Add("\"timestamp\": " + new System.DateTime() + ",");
+        sb.Add("\"index\": " + latk.layerList[latk.layerList.Count - 1].currentFrame + ",");
+        sb.Add("\"color\": [" + latk.mainColor[0] + ", " + latk.mainColor[1] + ", " + latk.mainColor[2] + "],");
+        sb.Add("\"points\": [");
+        for (var j = 0; j < points.Count; j ++) {
+            sb.Add("{\"co\": [" + points[j].x + ", " + points[j].y + ", " + points[j].z + "]");
+            if (j >= points.Count - 1) {
+                sb[sb.Count - 1] += "}";
+            } else {
+                sb[sb.Count - 1] += "},";
+            }
+        }
+        sb.Add("]");
+        sb.Add("}");
+
+        return string.Join("\n", sb.ToArray());
     }
 
 }

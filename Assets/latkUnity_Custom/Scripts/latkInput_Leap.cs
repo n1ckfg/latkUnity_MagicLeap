@@ -12,6 +12,7 @@
 
 using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.XR.MagicLeap;
 
 namespace MagicLeap
@@ -24,6 +25,7 @@ namespace MagicLeap
     public class latkInput_Leap : MonoBehaviour
     {
         public LightningArtist latk;
+        public LatkNetwork latkNetwork;
 
         #region Private Variables
         private ControllerConnectionHandler _controllerConnectionHandler;
@@ -162,6 +164,9 @@ namespace MagicLeap
                 MLInputControllerFeedbackIntensity intensity = (MLInputControllerFeedbackIntensity)((int)(value * 2.0f));
                 controller.StartFeedbackPatternVibe(MLInputControllerFeedbackPatternVibe.Buzz, intensity);
                 latk.clicked = false;
+                List<Vector3> points = latk.layerList[latk.currentLayer].frameList[latk.layerList[latk.currentLayer].currentFrame].brushStrokeList[latk.layerList[latk.currentLayer].frameList[latk.layerList[latk.currentLayer].currentFrame].brushStrokeList.Count - 1].points;
+
+                latkNetwork.sendStrokeData(points);
             }
         }
         #endregion
