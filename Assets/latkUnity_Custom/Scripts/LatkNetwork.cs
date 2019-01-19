@@ -8,6 +8,7 @@ using BestHTTP.SocketIO;
 public class LatkNetwork : MonoBehaviour {
 
     public LightningArtist latk;
+    public LatkDrawing latkd;
     public string serverAddress = "vr.fox-gieg.com";
     public int serverPort = 8080;
     public bool doDebug = true;
@@ -96,7 +97,7 @@ public class LatkNetwork : MonoBehaviour {
 
                 for (var i = 0; i < data.Count; i++) {
                     List<Vector3> points = getPointsFromJson(data[i]["points"], scaler);
-                    latk.inputInstantiateStroke(latk.mainColor, points);
+                    latkd.makeCurve(points, latk.killStrokes, latk.strokeLife);
                 }
 
                 int index = data[0]["index"].AsInt;
@@ -134,21 +135,23 @@ public class LatkNetwork : MonoBehaviour {
 
     public String setJsonFromPoints(List<Vector3> points) {
         List<String> sb = new List<String>();
-        sb.Add("{");
-        sb.Add("\"timestamp\": " + new System.DateTime() + ",");
-        sb.Add("\"index\": " + latk.layerList[latk.layerList.Count - 1].currentFrame + ",");
-        sb.Add("\"color\": [" + latk.mainColor[0] + ", " + latk.mainColor[1] + ", " + latk.mainColor[2] + "],");
-        sb.Add("\"points\": [");
-        for (var j = 0; j < points.Count; j ++) {
-            sb.Add("{\"co\": [" + points[j].x + ", " + points[j].y + ", " + points[j].z + "]");
-            if (j >= points.Count - 1) {
-                sb[sb.Count - 1] += "}";
-            } else {
-                sb[sb.Count - 1] += "},";
+        //try {
+            sb.Add("{");
+            sb.Add("\"timestamp\": " + new System.DateTime() + ",");
+            sb.Add("\"index\": " + latk.layerList[latk.layerList.Count - 1].currentFrame + ",");
+            sb.Add("\"color\": [" + latk.mainColor[0] + ", " + latk.mainColor[1] + ", " + latk.mainColor[2] + "],");
+            sb.Add("\"points\": [");
+            for (var j = 0; j < points.Count; j++) {
+                sb.Add("{\"co\": [" + points[j].x + ", " + points[j].y + ", " + points[j].z + "]");
+                if (j >= points.Count - 1) {
+                    sb[sb.Count - 1] += "}";
+                } else {
+                    sb[sb.Count - 1] += "},";
+                }
             }
-        }
-        sb.Add("]");
-        sb.Add("}");
+            sb.Add("]");
+            sb.Add("}");
+        //} catch (Exception e) { }
 
         return string.Join("\n", sb.ToArray());
     }
