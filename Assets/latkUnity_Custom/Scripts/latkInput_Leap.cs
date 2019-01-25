@@ -55,7 +55,7 @@ namespace MagicLeap
             MLInput.OnControllerButtonUp += HandleOnButtonUp;
             MLInput.OnControllerButtonDown += HandleOnButtonDown;
             MLInput.OnTriggerDown += HandleOnTriggerDown;
-            MLInput.OnTriggerDown -= HandleOnTriggerUp;
+            MLInput.OnTriggerUp += HandleOnTriggerUp;
         }
 
         /// <summary>
@@ -141,6 +141,7 @@ namespace MagicLeap
                 button == MLInputControllerButton.Bumper) {
                 // Demonstrate haptics using callbacks.
                 controller.StartFeedbackPatternVibe(MLInputControllerFeedbackPatternVibe.ForceUp, MLInputControllerFeedbackIntensity.Medium);
+                //latk.useCollisions = !latk.useCollisions;
             }
         }
 

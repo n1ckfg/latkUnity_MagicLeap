@@ -31,6 +31,8 @@ namespace MagicLeap
             Eyes
         }
 
+        public Transform target;
+
         #region Private Variables
         [SerializeField, Tooltip("The headpose canvas for example status text.")]
         private Text _statusLabel;
@@ -181,6 +183,7 @@ namespace MagicLeap
         {
             _confidence = confidence;
             UpdateStatusText();
+            target.position = result.point;
         }
         #endregion
     }
