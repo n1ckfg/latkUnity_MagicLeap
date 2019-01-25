@@ -166,7 +166,7 @@ namespace MagicLeap
                 latk.clicked = false;
                 List<Vector3> points = latk.layerList[latk.currentLayer].frameList[latk.layerList[latk.currentLayer].currentFrame].brushStrokeList[latk.layerList[latk.currentLayer].frameList[latk.layerList[latk.currentLayer].currentFrame].brushStrokeList.Count - 1].points;
 
-                latkNetwork.sendStrokeData(points);
+                if (latkNetwork != null) latkNetwork.sendStrokeData(points);
             }
         }
         #endregion

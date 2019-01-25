@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   latk: {fileID: 1325701560}
-  latkNetwork: {fileID: 0}
+  latkNetwork: {fileID: 1539565072}
 --- !u!1 &46576050
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +629,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437508, guid: bd6b520ae512fe14284192c59b70f0f3, type: 2}
       propertyPath: strokeLife
-      value: 0.1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd6b520ae512fe14284192c59b70f0f3, type: 2}
@@ -644,7 +644,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1265508970}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31c90d9e620690946875146fa17775c5, type: 3}
   m_Name: 
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1265508970}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8902e2fbdf3fc424d988c12afd69503d, type: 3}
   m_Name: 
@@ -800,13 +800,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1539565073}
   - component: {fileID: 1539565072}
+  - component: {fileID: 1539565074}
   m_Layer: 0
   m_Name: NETWORK_MANAGER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1539565072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -820,7 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   latk: {fileID: 1325701560}
   latkd: {fileID: 1660683157}
-  serverAddress: localhost
+  serverAddress: vr,fox-gieg.com
   serverPort: 8080
   doDebug: 0
   scaler: 10
@@ -837,6 +838,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1539565074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539565071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c890bdf354698ba429472b626542bcc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _privileges: ab0000001a000000
 --- !u!1 &1660683156
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,7 +865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1660683157
 MonoBehaviour:
   m_ObjectHideFlags: 0
