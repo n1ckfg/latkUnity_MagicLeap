@@ -2,7 +2,7 @@
 
 
 USES = \
-	C:\Users\nick\Documents\GitHub\LIGHTNING_ARTIST\latkUnity_MagicLeap\Temp/StagingArea\assets \
+	/Users/nick/GitHub/LIGHTNING_ARTIST/latkUnity_MagicLeap/Temp/StagingArea/assets \
 
 
 ######### DO NOT EDIT ABOVE #########
