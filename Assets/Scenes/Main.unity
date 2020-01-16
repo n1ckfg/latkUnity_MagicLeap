@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028353, g: 0.2257137, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -284,10 +284,95 @@ MonoBehaviour:
   padDirLeft: 0
   padDirRight: 0
   padDirCenter: 0
-  touchpad: {x: 0, y: 0}
+  touchpad: {x: 0, y: 0, z: 0}
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
   triggerVal: 0
+--- !u!1001 &346533996
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1201348982}
+    m_Modifications:
+    - target: {fileID: 5478556620093509914, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: latk
+      value: 
+      objectReference: {fileID: 1325701560}
+    - target: {fileID: 5478556620093509921, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_Name
+      value: BrushPreview
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478556620093509925, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478556620093509925, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478556620093509925, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478556620093509925, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478556620093509925, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478556620093509925, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478556620093509925, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478556620093509925, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478556620093509925, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478556620093509925, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478556620093509925, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478556620480724450, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6109eed86e5ce484b97c51ae4a140ed3, type: 3}
+--- !u!4 &346533997 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5478556620093509925, guid: 6109eed86e5ce484b97c51ae4a140ed3,
+    type: 3}
+  m_PrefabInstance: {fileID: 346533996}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &592694977
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,10 +970,41 @@ MonoBehaviour:
   padDirLeft: 0
   padDirRight: 0
   padDirCenter: 0
-  touchpad: {x: 0, y: 0}
+  touchpad: {x: 0, y: 0, z: 0}
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
   triggerVal: 0
+--- !u!1 &1201348981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201348982}
+  m_Layer: 0
+  m_Name: Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1201348982
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201348981}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 346533997}
+  m_Father: {fileID: 48846667}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1265508969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -935,7 +1051,7 @@ PrefabInstance:
     - target: {fileID: 11437508, guid: bd6b520ae512fe14284192c59b70f0f3, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 48846667}
+      objectReference: {fileID: 1201348982}
     - target: {fileID: 11437508, guid: bd6b520ae512fe14284192c59b70f0f3, type: 3}
       propertyPath: playOnStart
       value: 0
