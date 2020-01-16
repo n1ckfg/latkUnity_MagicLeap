@@ -870,7 +870,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1265508970}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8902e2fbdf3fc424d988c12afd69503d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0580419617841aa42ab33247a5cdbf00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   latk: {fileID: 1325701560}
@@ -1185,15 +1185,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1539565071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be57d68476a62764ba24012d4558198c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c635e7ba30ffbc4aa6df5b252e74528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   latk: {fileID: 1325701560}
   latkd: {fileID: 1660683157}
+  protocolMode: 0
   serverAddress: vr,fox-gieg.com
   serverPort: 8080
   doDebug: 0
   scaler: 10
+  streamToLatk: 0
+  armRecordToLatk: 0
 --- !u!4 &1539565073
 Transform:
   m_ObjectHideFlags: 0
