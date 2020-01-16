@@ -4,3 +4,6 @@
 [submodule "Assets/latkxMagicLeap"]
 	path = Assets/latkxMagicLeap
 	url = https://github.com/n1ckfg/latkxMagicLeap
+[submodule "Assets/latkxNetworking"]
+	path = Assets/latkxNetworking
+	url = https://github.com/n1ckfg/latkxNetworking
