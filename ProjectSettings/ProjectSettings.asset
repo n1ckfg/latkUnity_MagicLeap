@@ -165,7 +165,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Lumin: com.foxgieg.latkmagicleap
+    Lumin: com.foxgieg.latk
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -604,7 +604,7 @@ PlayerSettings:
     m_ModelFolderPath: 
     m_PortalFolderPath: 
   luminCert:
-    m_CertPath: D:/Sharing/_toolbox/Licenses/leap certs/latkone.cert
+    m_CertPath: /Users/nick/Sharing/_toolbox/App_Support/Build_tools/ml1_tools/latktwo.cert
     m_SignPackage: 1
   luminIsChannelApp: 0
   luminVersion:
