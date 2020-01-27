@@ -2,7 +2,7 @@
 // ---------------------------------------------------------------------
 // %COPYRIGHT_BEGIN%
 //
-// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved.
+// Copyright (c) 2018-present, Magic Leap, Inc. All Rights Reserved.
 // Use of this file is governed by the Creator Agreement, located
 // here: https://id.magicleap.com/creator-terms
 //
@@ -109,7 +109,7 @@ namespace MagicLeap
             {
                 // Update the cursor position and normal.
                 transform.position = result.point;
-                transform.LookAt(result.normal + result.point);
+                transform.LookAt(result.normal + result.point, _raycast.RayDirection);
                 transform.localScale = Vector3.one;
 
                 // Set the color to yellow if the hit is unobserved.

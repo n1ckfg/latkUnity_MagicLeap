@@ -2,7 +2,7 @@
 // ---------------------------------------------------------------------
 // %COPYRIGHT_BEGIN%
 //
-// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved.
+// Copyright (c) 2018-present, Magic Leap, Inc. All Rights Reserved.
 // Use of this file is governed by the Creator Agreement, located
 // here: https://id.magicleap.com/creator-terms
 //
@@ -103,7 +103,7 @@ namespace UnityEngine.XR.MagicLeap
         /// <summary>
         /// Initializes component.
         /// </summary>
-        virtual protected void OnEnable()
+        virtual protected void Start()
         {
             _isReady = true;
             MLResult result = MLWorldRays.Start();
@@ -118,7 +118,7 @@ namespace UnityEngine.XR.MagicLeap
         /// <summary>
         /// Cleans up component.
         /// </summary>
-        virtual protected void OnDisable()
+        virtual protected void OnDestroy()
         {
             if (MLWorldRays.IsStarted)
             {

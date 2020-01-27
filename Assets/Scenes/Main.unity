@@ -204,6 +204,11 @@ PrefabInstance:
       propertyPath: _devicesAllowed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114463424589709878, guid: 6884f69ad0adbb441905ff499f5d1ece,
+        type: 3}
+      propertyPath: _devicesAllowed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114621807077813600, guid: 6884f69ad0adbb441905ff499f5d1ece,
         type: 3}
       propertyPath: _placeOnAwake
@@ -898,6 +903,11 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114199533994420944, guid: 6884f69ad0adbb441905ff499f5d1ece,
+        type: 3}
+      propertyPath: _devicesAllowed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463424589709878, guid: 6884f69ad0adbb441905ff499f5d1ece,
         type: 3}
       propertyPath: _devicesAllowed
       value: 6

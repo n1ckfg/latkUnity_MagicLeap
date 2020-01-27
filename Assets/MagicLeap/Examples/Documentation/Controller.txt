@@ -1,7 +1,7 @@
 # Example Scene: Controller
 
 This example demonstrates and prescribes preferred methods for receiving input
-from a Control controller and sending haptic feedback to it.
+from the Control controller and sending haptic feedback to it.
 
 When the controller is connected, a controller model will appear and stats about it will
 show up on the UI. This controller model will follow your physical controller with 6dof
@@ -36,3 +36,6 @@ When you touch the Touchpad:
 - A LED pattern will occur in the controller where the closest LED to your touchpad
   position and the oposite LED will light up.
 - The touchpad gesture is shown on the UI.
+
+## Privileges
+- ControllerPose

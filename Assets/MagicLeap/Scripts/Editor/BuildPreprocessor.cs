@@ -2,7 +2,7 @@
 // ---------------------------------------------------------------------
 // %COPYRIGHT_BEGIN%
 //
-// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved.
+// Copyright (c) 2018-present, Magic Leap, Inc. All Rights Reserved.
 // Use of this file is governed by the Creator Agreement, located
 // here: https://id.magicleap.com/creator-terms
 //
@@ -31,14 +31,8 @@ namespace MagicLeap
             {
                 if (PlayerSettings.colorSpace != ColorSpace.Linear)
                 {
-                    Debug.Log("BuildPreprocesor changing PlayerSettings.colorSpace to ColorSpace.Linear");
+                    Debug.Log("BuildPreprocessor changing PlayerSettings.colorSpace to ColorSpace.Linear");
                     PlayerSettings.colorSpace = ColorSpace.Linear;
-                }
-
-                if (PlayerSettings.stereoRenderingPath != StereoRenderingPath.Instancing)
-                {
-                    Debug.Log("BuildPreprocesor changing PlayerSettings.stereoRenderingPath to StereoRenderingPath.Instancing");
-                    PlayerSettings.stereoRenderingPath = StereoRenderingPath.Instancing;
                 }
             }
         }
